@@ -52,8 +52,8 @@
                     'url' => 'URL',
                     'post' => 'Post',
                   );
-                  $active_type = $form_data['form']->followup_type;
-                  $active_detination = $form_data['form']->followup_destination;
+                  $active_type = isset($form_data['form']->followup_type) ? $form_data['form']->followup_type : 'none';
+                  $active_detination = isset($form_data['form']->followup_destination) ? $form_data['form']->followup_destination : '';
                 ?>
                 <select name="form[followup-type]" id="form-followup-type">
                   <?php foreach ($followup_types as $key => $value):?>
